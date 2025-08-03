@@ -1,0 +1,28 @@
+{
+  "name": "bookmarks-nav",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && cp manifest.json popup.html dist/ && node scripts/build-crx.js",
+    "build:crx": "vite build && cp manifest.json dist/ && node scripts/build-crx.js",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/chrome": "^0.1.1",
+    "@types/node": "^24.1.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "canvas": "^3.1.2",
+    "crx": "^5.0.1",
+    "fs-extra": "^11.3.0",
+    "path": "^0.12.7",
+    "sass": "^1.89.2",
+    "typescript": "^5.9.2",
+    "vite": "^5.4.10",
+    "vue": "^3.5.18"
+  }
+}

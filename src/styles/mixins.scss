@@ -1,0 +1,91 @@
+@use './variables.scss' as *;
+
+// Common bookmark item styles
+@mixin bookmark-item-base {
+  display: flex;
+  align-items: center;
+  border-radius: $border-radius;
+  cursor: pointer;
+  transition: background-color $transition-fast;
+  padding: $spacing-xs $spacing-sm;
+}
+
+@mixin bookmark-item-hover {
+  &:hover {
+    background: $hover-light;
+  }
+}
+
+@mixin bookmark-item-with-url {
+  background: $background-color;
+  
+  &:hover {
+    background: $hover-background;
+  }
+}
+
+@mixin bookmark-icon {
+  width: $icon-size;
+  height: $icon-size;
+}
+
+@mixin bookmark-title {
+  font-size: $font-size-small;
+  color: $text-color;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin delete-button {
+  font-size: $font-size-small;
+  color: $text-muted;
+  cursor: pointer;
+  padding: 2px 4px;
+  border-radius: 2px;
+  margin-left: $spacing-xs;
+  opacity: 0;
+  transition: opacity $transition-fast;
+  
+  &:hover {
+    color: $text-secondary;
+    background: #ccc;
+  }
+}
+
+@mixin delete-button-on-hover {
+  &:hover .delete-btn {
+    opacity: 1;
+  }
+}
+
+// Common layout styles
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Common spacing
+@mixin section-spacing {
+  margin-bottom: $spacing-xl;
+}
+
+@mixin heading-spacing {
+  margin: 0 0 $spacing-md 0;
+}

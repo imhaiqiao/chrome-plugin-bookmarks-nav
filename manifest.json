@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "Bookmarks Nav",
+  "version": "1.0.0",
+  "description": "A plugin to quickly find and access your Chrome bookmarks",
+  "permissions": [
+    "bookmarks",
+    "storage",
+    "tabs"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Bookmarks Nav"
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  }
+}
